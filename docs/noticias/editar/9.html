@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CMS Brasil Open 2015">
+    <meta name="author" content="4V">
+    <meta name="keyword" content="">
+    <link href="../../assets/img/structure/favicon.png" rel="shortcut icon" />
+    <title>Brasil Open</title>
+
+    <link href="../../assets/css/structure/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/structure/font-awesome.css" rel="stylesheet" />
+    <link href="../../assets/css/structure/bootstrap-reset.css" rel="stylesheet" />
+    <link href="../../assets/css/structure/style.css" rel="stylesheet">
+    <link href="../../assets/css/structure/style-responsive.css" rel="stylesheet" />
+    <link type="text/css" href="../../assets/css/ui/bootstrap-wysihtml5.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/ui/datepicker.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/ui/timepicker.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/ui/dataTables.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/ui/ajax.css" type="text/css" />
+
+    
+    <script src="../../assets/js/structure/jquery.js"></script>
+    <script src="../../assets/js/structure/bootstrap.min.js"></script>
+    <script src="../../assets/js/ui/jquery.customSelect.min.js"></script>
+    <script src="../../assets/js/ui/jquery.nicescroll.js"></script>
+    <script src="../../assets/js/ui/wysihtml5-0.3.0.js"></script>
+    <script src="../../assets/js/ui/bootstrap-wysihtml5.js"></script>
+    <script src="../../assets/js/ui/bootstrap-datepicker.js"></script>
+    <script src="../../assets/js/ui/bootstrap-timepicker.js"></script>
+    <script src="../../assets/js/ui/dataTables.js"></script>
+    <script src="../../assets/js/structure/cms.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/structure/html5shiv.js"></script>
+    <script src="../../assets/js/structure/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="wrapper">
+        <section id="container" >
+            <header class="header white-bg">
+                <a href="../../dashboard.html" class="logo">Brasil <span>Open</span></a>
+                <div class="top-nav ">
+                    <ul class="nav pull-right top-menu">
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="javascript:;">
+                                                                    <img class="img-rounded" width="29" alt="" src="../../assets/upload/avatar/default/user.png">
+                                                                <span class="username"></span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu extended logout">
+                                <div class="log-arrow-up"></div>
+                                <li><a href="../../perfil.html"><i class=" icon-suitcase"></i>Perfil</a></li>
+                                <li><a href="../../configuracao.html"><i class="icon-cog"></i> Configuração</a></li>
+                                <li><a href="../../administrador.html"><i class=" icon-user"></i> Administrador</a></li>
+                                <li><a href="../../index.html"><i class="icon-key"></i> Sair</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <aside>
+                <div id="sidebar"  class="nav-collapse ">
+                    <ul class="sidebar-menu" id="nav-accordion">
+                        <li>
+                            <a id="dashboard" href="../../dashboard.html">
+                                <i class="icon-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="highlights" href="../../destaques.html">
+                                <i class="icon-star-empty"></i>
+                                <span>Destaques</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="news" href="../../noticias.html">
+                                <i class="icon-file-text-alt"></i>
+                                <span>Notícias</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="key" href="../../chave.html">
+                                <i class="icon-key"></i>
+                                <span>Chave</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="gallery" href="../../galeria-de-fotos.html">
+                                <i class="icon-camera"></i>
+                                <span>Galeria de fotos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="gallery" href="../../index.html">
+                                <i class="icon-share-alt"></i>
+                                <span>Sair</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <section id="main-content">
+                <section class="wrapper">
+                    <div class="row">
+	<div class="col-lg-12">
+		<section class="panel">
+			<header class="panel-heading"><i class="icon-list-alt"></i> Notícias</header>
+			<div class="panel-body">
+				<div class="clearfix">
+					<div class="btn-group">
+						<a href="../../noticias.html" class="btn btn-shadow btn-primary btn-sm"><i class="icon-th-list"></i> Listar</a>
+						<a href="javascript:;" class="btn btn-shadow btn-primary btn-sm" id="addGallery"><i class="icon-plus"></i> Adicionar imagem</a>
+					</div>
+				</div>
+								<form action="" method="post" id="create">
+					<fieldset>
+						<label><input type="text" placeholder="Título" name="title" id="title" class="form-control col-lg-12" value="Gambit #3" /></label>
+						<label><input type="text" placeholder="Subtítulo" name="subtitle" id="subtitle"  class="form-control col-lg-12" value="marvel" /></label>
+						<label><input type="text" placeholder="Chamada" name="call" id="call" class="form-control col-lg-12" value="Now that we know who you are, I know who I am." /></label>
+						<label><input type="text" placeholder="Data" name="date" id="date"  class="datepicker form-control col-lg-12" value="05/02/2015" /></label>
+						<label><textarea placeholder="Descrição" name="description" id="description" class="form-control col-lg-12" rows="12">Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.<br><br>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.<br></textarea></label>
+												<div class="row">
+							<div class="col-xs-6 col-md-2">
+								<span class="thumbnail relative">
+									<a href="javascript:;" class="btn btn-shadow btn-danger btn-xs remove absolute right" rel="9"><i class="icon-remove"></i></a>
+									<img src="http://brasilopen.dev:8888/assets/upload/news/gambit-3/2fd080f851e420acc7f7a03c857ac1e0.jpg" />
+								</span>
+							</div>
+						</div>
+						
+						<label><button class="btn btn-shadow btn-info" type="button" id="publish">Salvar</button></label>
+						<label><input type="hidden" id="hidden_id" name="hidden_id" value="9" /></label>
+						<label><input type="hidden" id="path_name" name="path_name" value="gambit-3" /></label>
+					</fieldset>
+				</form>
+							</div>
+		</section>
+	</div>
+</div>
+
+<div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="galleryModal" class="modal fade">
+    <form  action="" method="post" id="gallery">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><i class="icon-camera"></i> Galeria de fotos</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Selecione uma imagem para upload</p>
+					<label>
+						<span class="btn btn-shadow btn-default btn-xs simple-upload">
+							<span class="fileupload-new">
+								<i class="icon-cloud-upload"></i> Imagem
+							</span>
+							<input type="file" id="simple" name="userfile" class="simple hide" />
+						</span>
+						<span class="name-file"></span>
+					</label>
+                    <div class="result">
+                        <p class="text-error hide"><i class="icon-frown"></i></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-shadow btn-primary btn-sm" type="button">Fechar</button>
+                    <button class="btn btn-shadow btn-success btn-sm" type="button" id="save">Salvar</button>
+                    <input type="hidden" id="news_id" name="news_id" />
+                    <input type="hidden" id="slug" name="slug" />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>                </section>
+            </section>
+        </section>
+
+        <div id="windows-ajax">
+            <div class="content-ajax">
+                <div id="fadingBarsG">
+                    <div id="fadingBarsG_1" class="fadingBarsG"></div>
+                    <div id="fadingBarsG_2" class="fadingBarsG"></div>
+                    <div id="fadingBarsG_3" class="fadingBarsG"></div>
+                    <div id="fadingBarsG_4" class="fadingBarsG"></div>
+                    <div id="fadingBarsG_5" class="fadingBarsG"></div>
+                    <div id="fadingBarsG_6" class="fadingBarsG"></div>
+                    <div id="fadingBarsG_7" class="fadingBarsG"></div>
+                    <div id="fadingBarsG_8" class="fadingBarsG"></div>
+                </div>
+            </div>
+        </div>
+
+        <div aria-hidden="true" role="dialog" tabindex="-1" id="modal" class="modal fade">
+            <div class="modal-dialog modal-lg-">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-shadow btn-primary btn-sm" type="button">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <footer class="site-footer">
+        <div class="text-center">
+            2015 &copy; Brasil Open.
+        </div>
+    </footer>
+
+            <script src="../../assets/js/section/news/news.js"></script>
+        <script src="../../assets/js/section/news/publish.js"></script>
+        <script src="../../assets/js/section/news/add.js"></script>
+        <script src="../../assets/js/section/news/remove.js"></script>
+        </body>
+</html>

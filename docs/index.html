@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CORE dos sistemas da 4V">
+    <meta name="author" content="4V">
+    <meta name="keyword" content="Admin, CMS, 4V, Cliente, PHP, Codeigniter, Ruby, Ruby on Rails">
+    <link href="assets/img/structure/favicon.png" rel="shortcut icon" />
+
+    <title>CORE</title>
+
+    <link href="assets/css/structure/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/structure/bootstrap-reset.css" rel="stylesheet">
+    <link href="assets/css/structure/font-awesome.css" rel="stylesheet" />
+    <link href="assets/css/structure/style.css" rel="stylesheet">
+    <link href="assets/css/structure/style-responsive.css" rel="stylesheet" />
+    <link href="assets/css/ui/joyride-2.1.css" rel="stylesheet">
+    <script src="assets/js/structure/jquery.js"></script>
+    <script src="assets/js/structure/bootstrap.min.js"></script>
+    <script src="assets/js/ui/modernizr.mq.js"></script>
+    <script src="assets/js/ui/jquery.joyride-2.1.js"></script>
+    <script src="assets/js/section/login/login.js"></script>
+    <!--[if lt IE 9]>
+    <script src="assets/js/structure/html5shiv.js"></script>
+    <script src="assets/js/structure/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="login-body">
+    <div class="container">
+        <form id="login" name="login" class="form-signin" action="dashboard.html" method="post">
+            <h2 class="form-signin-heading">entrar agora</h2> 
+            <div class="login-wrap v-login">
+                <input type="text" class="form-control" placeholder="Login" autofocus id="nicename" name="nicename">
+                <input type="password" class="form-control" placeholder="Senha" id="password" name="password">
+                <label class="checkbox">
+                    <span class="pull-right"><a data-toggle="modal" class="v-forgot" href="index.html#modal"> Esqueceu sua senha?</a></span>
+                </label>
+                <button class="btn btn-lg btn-login btn-block" type="submit">Entrar</button>
+            </div>
+        </form>
+    </div>
+
+    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="modal" class="modal fade">
+        <form id="reset" name="reset" action="" method="post">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Esqueceu sua senha?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Digite abaixo seu endereço de e-mail para redefinir sua senha.</p>
+                        <input type="text" id="mail" name="mail" placeholder="Email" class="form-control placeholder-no-fix">
+                        <div class="result">
+                            <p class="not-found text-error  hide"><i class="icon-remove"></i> O e-mail informado não foi encontrado na base de dados.</p>
+                            <p class="sent text-success hide"><i class="icon-ok"></i> Sua senha foi enviada para seu e-mail.</p>
+                            <p class="loading text-info hide"><img src="assets/img/login/ajax.gif" />Enviando e-mail... aguarde.</p>
+                            <p class="link text-warning hide"><i class="icon-frown"></i> Ocorreu um erro ao enviar sua senha, tente mais tarde.</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-shadow btn-primary btn-sm" type="button">Fechar</button>
+                        <button class="btn btn-shadow btn-success btn-sm" type="button" id="send">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <ol id="visualize" class="hide">
+        <li data-class="v-login" data-button="Próximo" data-options="tipLocation:top">
+            <h3>Login #1</h3>
+            <p>Para acessar o sistema digite seu <strong><em>login</em></strong> e <strong><em>senha</em></strong>.</p>
+        </li>
+        <li data-class="v-forgot" data-button="Fechar" data-options="tipLocation:right;tipAnimation:fade">
+            <h3>Esqueci minha senha #2</h3>
+            <p>Para gerar uma nova senha, entre com <strong><em>seu e-mail</em><strong>.</p>
+        </li>
+    </ol>
+
+</body>
+</html>
